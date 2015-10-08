@@ -51,10 +51,6 @@ ifeq ($(TARGET_USES_QCOM_BSP),true)
     LOCAL_C_INCLUDES += $(call project-path-for,qcom-display)/libgralloc
 endif
 
-ifeq ($(BOARD_USE_MHEAP_SCREENSHOT),true)
-    LOCAL_CFLAGS += -DUSE_MHEAP_SCREENSHOT
-endif
-
 ifeq ($(BOARD_EGL_SKIP_FIRST_DEQUEUE),true)
     LOCAL_CFLAGS += -DSURFACE_SKIP_FIRST_DEQUEUE
 endif
